@@ -1,0 +1,30 @@
+# Node modules (VERY IMPORTANT)
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables (secrets)
+.env
+
+# Build folders
+client/build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# MongoDB local data (if any)
+data/
+
+# IDE files
+.vscode/
+.idea/
+
+# Docker (optional temp files)
+*.pid
+*.seed
