@@ -6,8 +6,8 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-
-
+const journalRoutes = require("./routes/journalRoutes");
+app.use("/journals", journalRoutes);
 mongoose.connect("mongodb://localhost:27017/journalDB")
     .then(() => console.log("MongoDB Connected"))
     .catch(err => console.log(err));
