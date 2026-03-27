@@ -10,7 +10,11 @@ app.use(express.json());
 const journalRoutes = require("./routes/journalRoutes");
 app.use("/journals", journalRoutes);
 
-mongoose.connect("mongodb://localhost:27017/journaldb")
+// mongoose.connect("mongodb://localhost:27017/journaldb")
+//     .then(() => console.log("MongoDB Connected"))
+//     .catch(err => console.log(err));
+
+mongoose.connect("mongodb://mongo:27017/journaldb")
     .then(() => console.log("MongoDB Connected"))
     .catch(err => console.log(err));
 
