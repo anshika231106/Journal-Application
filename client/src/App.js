@@ -7,18 +7,19 @@ function App() {
   const [journals, setJournals] = useState([]);
 
   const fetchData = async () => {
-    const res = await axios.get("http://localhost:5000/journals");
+    const res = await axios.get("http://127.0.0.1:50084/journals");
     setJournals(res.data);
   };
 
+
   const addEntry = async () => {
-    await axios.post("http://localhost:5000/journals", { text });
+    await axios.post("http://127.0.0.1:50084/journals", { text });
     setText("");
     fetchData();
   };
 
   const deleteEntry = async (id) => {
-    await axios.delete(`http://localhost:5000/journals/${id}`);
+    await axios.delete(`http://127.0.0.1:50084/journals/${id}`);
     fetchData();
   };
 
