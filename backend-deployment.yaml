@@ -1,20 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
+  name: journal-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: backend
+      app: journal
   template:
     metadata:
       labels:
-        app: backend
+        app: journal
     spec:
       containers:
-      - name: backend
+      - name: journal
         image: journal-app
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
+        env:
+        - name: MONGO_URL
+          value: "mongodb://mongo:27017/journaldb"

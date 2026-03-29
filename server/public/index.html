@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Journal App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+  <div class="journal-cover">
+    <div class="cover-stripe"></div>
+    <div class="cover-content">
+      <span class="cover-label">My Journal</span>
+      <h2 class="cover-title">Journal App ✒️</h2>
+      <p class="cover-date" id="date"></p>
+    </div>
+  </div>
+
+  <div class="journal-body">
+
+    <div class="entry-composer">
+      <div class="composer-label">New Entry</div>
+
+      <textarea id="text" class="composer-input"
+        placeholder="What's on your mind today..."
+        rows="3"></textarea>
+
+      <div class="composer-footer">
+        <span class="composer-hint">Ctrl + Enter to save</span>
+        <button id="addBtn" class="add-btn">+ Add Entry</button>
+      </div>
+    </div>
+
+    <div class="entries-section">
+      <ul id="list" class="entries-list"></ul>
+    </div>
+
+  </div>
+</div>
+
+<script>
+document.getElementById("date").innerText =
+  new Date().toLocaleDateString("en-US", {
+    weekday: "long", year: "numeric", month: "long", day: "numeric"
+  });
+</script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
