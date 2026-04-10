@@ -16,7 +16,7 @@ The application is deployed using Docker and Kubernetes.
 
 ## Video Demonstration
 
-https://github.com/user-attachments/assets/df3153af-3e00-4648-956d-68a2d11ae573
+https://github.com/user-attachments/assets/de322deb-d081-453e-8085-dc14ec48b856
 
 
 
