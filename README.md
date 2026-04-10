@@ -14,6 +14,12 @@ The application is deployed using Docker and Kubernetes.
 
 ---
 
+## Video Demonstration
+
+https://github.com/user-attachments/assets/df3153af-3e00-4648-956d-68a2d11ae573
+
+
+
 ## 🛠️ Tech Stack
 
 * Node.js + Express
